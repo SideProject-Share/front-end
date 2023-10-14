@@ -10,6 +10,7 @@ const config: StorybookConfig = {
     '@storybook/addon-interactions',
     '@storybook/addon-actions',
     '@storybook/addon-controls',
+    '@storybook/addon-docs',
     {
       name: '@storybook/addon-styling',
       options: {
@@ -22,7 +23,7 @@ const config: StorybookConfig = {
     options: {},
   },
   docs: {
-    autodocs: 'tag',
+    autodocs: true,
   },
   babel: async (config) => ({
     ...config,

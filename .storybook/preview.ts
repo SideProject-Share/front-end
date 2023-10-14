@@ -12,7 +12,6 @@ export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
 
   controls: {
-    controls: { expanded: true },
     matchers: {
       color: /(background|color)$/i,
       date: /Date$/,
@@ -24,15 +23,12 @@ const preview: Preview = {
   parameters: {
     actions: { argTypesRegex: '^on[A-Z].*' },
     backgrounds: {
-      default: 'light',
+      default: 'main',
       values: [
+        { name: 'main', value: '#242424' },
         {
           name: 'white',
           value: '#FFFFFF',
-        },
-        {
-          name: 'light',
-          value: '#F4F6FA',
         },
         {
           name: 'dark',

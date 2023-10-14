@@ -40,7 +40,7 @@ export default forwardRef<HTMLButtonElement, ButtonProps>((inProps, ref) => {
     children,
     onClick,
     variant = 'primary',
-    size = 'big',
+    size = 'medium',
     disabled = false,
     isLoading = false,
     selected = false,

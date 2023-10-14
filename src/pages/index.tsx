@@ -1,3 +1,4 @@
+import { Button } from '@/components';
 import { useState } from 'react';
 import tw from 'twin.macro';
 
@@ -27,6 +28,9 @@ export default function Home() {
       <div className="text-main-disabled">index</div>
       <div tw="text-main-default">index</div>
       <div tw="text-main-disabled">index</div>
+      <Button variant="primary" tw="w-24">
+        hi
+      </Button>
     </>
   );
 }
