@@ -30,8 +30,8 @@ export const Variant: Story = {
   argTypes: {
     variant: {
       control: {
-        type: 'select',
-        options: ['primary', 'secondary', 'danger', 'alert', 'success', 'transparent', 'transparent-border'],
+        control: { type: 'radio' },
+        options: ['primary', 'secondary'],
       },
     },
   },

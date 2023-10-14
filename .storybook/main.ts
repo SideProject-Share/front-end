@@ -9,6 +9,7 @@ const config: StorybookConfig = {
     '@storybook/addon-essentials',
     '@storybook/addon-interactions',
     '@storybook/addon-actions',
+    '@storybook/addon-controls',
     {
       name: '@storybook/addon-styling',
       options: {
