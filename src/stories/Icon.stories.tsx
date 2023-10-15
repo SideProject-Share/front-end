@@ -1,66 +1,164 @@
 import 'twin.macro';
-
 import type { Meta, StoryObj } from '@storybook/react';
 
-import LogoIcon from '@/assets/icons/logo.svg';
-import CheveronUpIcon from '@/assets/icons/chevron_up_16.svg';
-import CheveronRightIcon from '@/assets/icons/chevron_right_16.svg';
-import CheveronDownIcon from '@/assets/icons/chevron_down_16.svg';
-import CheveronLeftIcon from '@/assets/icons/chevron_left_16.svg';
+import { Icon } from '@/components';
+import { IconLists } from '@/components/Icon';
 
 /**
- * 다양하게 버튼을 커스텀 할 수 있습니다.
+ * 사이트에 쓰이는 아이콘을 확인 할 수 있습니다.
  */
 
 const meta = {
-  title: 'atoms/Icons',
-  argTypes: {
-    variant: {
-      description: 'type `primary` | `gray[xxx]` | `black` | `outlined` | `ghost`',
-    },
-    size: { description: 'type `medium` | `big` | `none`' },
-    selected: { description: 'type `boolean` `true` | `false`' },
-    disabled: { description: 'type `boolean` `true` | `false`' },
-    isLoading: { description: 'type `boolean` `true` | `false`' },
-    children: { description: 'type `string 원하는 텍스트를 입력하세요.`' },
-  },
-
+  title: 'atoms/Icon',
+  component: Icon,
   parameters: {
     docs: {
       story: { inline: true },
       source: { type: 'code' },
     },
   },
-} as Meta;
+} as Meta<typeof Icon>;
 
 export default meta;
 
 type Story = StoryObj<typeof meta>;
 
+export const Default: Story = {
+  args: {
+    icon: 'LogoIcon',
+  },
+  argTypes: {
+    icon: {
+      options: IconLists,
+      control: {
+        type: 'select',
+      },
+    },
+  },
+  render: (args) => <Icon icon={args.icon} />,
+};
+
 /**
- * 기본 메인 버튼 입니다.
+ * 16px 아이콘 입니다.
  */
 
-export const Default: Story = {
-  decorators: [
-    (Story) => (
-      <div tw="flex flex-col gap-2">
-        <Story />
+export const Regular: Story = {
+  render: () => (
+    <div tw="flex flex-col gap-4">
+      <div tw="w-fit flex gap-4 p-4 border border-gray-100 rounded-sm">
+        <Icon icon="LogoIcon" />
       </div>
-    ),
-  ],
-  render: (args) => (
-    <>
-      <LogoIcon color={args.color} />
-      <CheveronUpIcon color={args.color} />
-      <CheveronRightIcon color={args.color} />
-      <CheveronDownIcon color={args.color} />
-      <CheveronLeftIcon color={args.color} />
-      <CheveronUpIcon color={args.color} />
-      <CheveronRightIcon color={args.color} />
-      <CheveronDownIcon color={args.color} />
-      <CheveronLeftIcon color={args.color} />
-    </>
+
+      <div tw="w-fit flex gap-4 p-4 border border-gray-100 rounded-sm">
+        <Icon icon="CheveronUpIcon" />
+        <Icon icon="CheveronRightIcon" />
+        <Icon icon="CheveronDownIcon" />
+        <Icon icon="CheveronLeftIcon" />
+      </div>
+
+      <div tw="flex gap-4">
+        <div tw="w-fit flex gap-4 p-4 border border-gray-100 rounded-sm">
+          <Icon icon="CloseEmptyIcon" />
+          <Icon icon="CloseFillIcon" />
+        </div>
+
+        <div tw="w-fit flex gap-4 p-4 border border-gray-100 rounded-sm">
+          <Icon icon="ErrorEmptyIcon" />
+          <Icon icon="ErrorFillIcon" />
+        </div>
+
+        <div tw="w-fit flex gap-4 p-4 border border-gray-100 rounded-sm">
+          <Icon icon="HeartEmptyIcon" />
+          <Icon icon="HeartFillIcon" />
+        </div>
+      </div>
+
+      <div tw="w-fit flex gap-4 p-4 border border-gray-100 rounded-sm">
+        <Icon icon="CalendarIcon" />
+        <Icon icon="ChatOnIcon" />
+        <Icon icon="CheckIcon" />
+        <Icon icon="DealIcon" />
+        <Icon icon="FilterIcon" />
+        <Icon icon="GraphIcon" />
+        <Icon icon="PeopleIcon" />
+        <Icon icon="QuestionIcon" />
+        <Icon icon="RefreshIcon" />
+        <Icon icon="SearchIcon" />
+        <Icon icon="SuccessIcon" />
+        <Icon icon="TooltipIcon" />
+        <Icon icon="ViewIcon" />
+      </div>
+    </div>
+  ),
+};
+
+/**
+ * 24px 아이콘 입니다.
+ */
+
+export const Big: Story = {
+  render: () => (
+    <div tw="flex flex-col gap-4">
+      <div tw="w-fit flex gap-4 p-4 border border-gray-100 rounded-sm">
+        <Icon icon="CheveronUpBigIcon" />
+        <Icon icon="CheveronRightBigIcon" />
+        <Icon icon="CheveronDownBigIcon" />
+        <Icon icon="CheveronLeftBigIcon" />
+      </div>
+
+      <div tw="flex gap-4">
+        <div tw="w-fit flex gap-4 p-4 border border-gray-100 rounded-sm">
+          <Icon icon="ChatIcon" />
+          <Icon icon="ChatActiveIcon" />
+        </div>
+
+        <div tw="w-fit flex gap-4 p-4 border border-gray-100 rounded-sm">
+          <Icon icon="GraphBigIcon" />
+          <Icon icon="GraphAcitveBigIcon" />
+        </div>
+      </div>
+
+      <div tw="flex gap-4">
+        <div tw="w-fit flex gap-4 p-4 border border-gray-100 rounded-sm">
+          <Icon icon="HeartEmptyBigIcon" />
+          <Icon icon="HeartFillBigIcon" />
+          <Icon icon="HeartNavIcon" />
+          <Icon icon="HeartNavActiveIcon" />
+        </div>
+        <div tw="w-fit flex gap-4 p-4 border border-gray-100 rounded-sm">
+          <Icon icon="HomeIcon" />
+          <Icon icon="HomeActiveIcon" />
+          <Icon icon="MyIcon" />
+          <Icon icon="MyActiveIcon" />
+        </div>{' '}
+      </div>
+
+      <div tw="w-fit flex gap-4 p-4 border border-gray-100 rounded-sm">
+        <Icon icon="LocationIcon" />
+        <Icon icon="LocationActiveIcon" />
+        <Icon icon="PinIcon" />
+        <Icon icon="PinActiveIcon" />
+        <Icon icon="ZoomInIcon" />
+        <Icon icon="ZoomOutIcon" />
+      </div>
+
+      <div tw="w-fit flex gap-4 p-4 border border-gray-100 rounded-sm">
+        <Icon icon="AppstoreIcon" />
+        <Icon icon="GoolglePlayIcon" />
+        <Icon icon="BellIcon" />
+        <Icon icon="CloseEmptyBigIcon" />
+        <Icon icon="EnterFillIcon" />
+        <Icon icon="FilterBigIcon" />
+        <Icon icon="FullIcon" />
+        <Icon icon="ListIcon" />
+        <Icon icon="MoreIcon" />
+        <Icon icon="RefreshBigIcon" />
+        <Icon icon="SearchBigIcon" />
+        <Icon icon="SettingIcon" />
+        <Icon icon="ShareIcon" />
+        <Icon icon="WriteIcon" />
+      </div>
+    </div>
   ),
 };
 
