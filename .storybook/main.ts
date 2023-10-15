@@ -51,10 +51,49 @@ const config: StorybookConfig = {
     if (config.resolve) {
       config.resolve.alias = {
         ...config.resolve.alias,
-
         '@': path.resolve(__dirname, '../src'),
       };
     }
+
+    const imageRule = config.module?.rules?.find((rule) => {
+      const test = (rule as { test: RegExp }).test;
+
+      if (!test) {
+        return false;
+      }
+
+      return test.test('.svg');
+    }) as { [key: string]: any };
+
+    imageRule.exclude = /\.svg$/;
+
+    config.module?.rules?.push(
+      ...[
+        {
+          test: /\.svg$/,
+          use: ['@svgr/webpack'],
+          resourceQuery: /url/, // *.svg?url
+        },
+        {
+          test: /\.svg$/i,
+          issuer: /\.[jt]sx?$/,
+          resourceQuery: { not: [/url/] }, // exclude react component if *.svg?url
+          use: {
+            loader: '@svgr/webpack',
+            options: {
+              svgoConfig: {
+                plugins: [
+                  {
+                    name: 'removeViewBox',
+                    active: false,
+                  },
+                ],
+              },
+            },
+          },
+        },
+      ],
+    );
 
     return config;
   },
