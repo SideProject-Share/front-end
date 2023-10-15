@@ -56,6 +56,10 @@ export const Default: Story = {
       <CheveronRightIcon color={args.color} />
       <CheveronDownIcon color={args.color} />
       <CheveronLeftIcon color={args.color} />
+      <CheveronUpIcon color={args.color} />
+      <CheveronRightIcon color={args.color} />
+      <CheveronDownIcon color={args.color} />
+      <CheveronLeftIcon color={args.color} />
     </>
   ),
 };
