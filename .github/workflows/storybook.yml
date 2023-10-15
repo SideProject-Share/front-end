@@ -13,7 +13,7 @@ jobs:
   test:
     # Operating System
     runs-on: ubuntu-latest
-      outputs:
+    outputs:
       status: ${{ job.status }}
     # Job steps
     steps:
