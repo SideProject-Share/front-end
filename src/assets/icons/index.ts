@@ -55,6 +55,7 @@ export { default as CheveronUpBigIcon } from '@/assets/icons/big/chevron_up_24.s
 export { default as CheveronRightBigIcon } from '@/assets/icons/big/chevron_right_24.svg';
 export { default as CheveronDownBigIcon } from '@/assets/icons/big/chevron_down_24.svg';
 export { default as CheveronLeftBigIcon } from '@/assets/icons/big/chevron_left_24.svg';
+export { default as CheveronLeftActiveBigIcon } from '@/assets/icons/big/chevron_left_active_24.svg';
 
 export { default as CloseEmptyBigIcon } from '@/assets/icons/big/close_empty_24.svg';
 
@@ -95,6 +96,7 @@ export { default as SearchBigIcon } from '@/assets/icons/big/search_24.svg';
 export { default as SearchActiveBigIcon } from '@/assets/icons/big/search_active_24.svg';
 
 export { default as SettingIcon } from '@/assets/icons/big/setting_24.svg';
+export { default as SettingActiveIcon } from '@/assets/icons/big/setting_active_24.svg';
 
 export { default as ShareIcon } from '@/assets/icons/big/share_24.svg';
 

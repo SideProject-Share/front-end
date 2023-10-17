@@ -104,6 +104,7 @@ export const Big: Story = {
         <Icon icon="CheveronRightBigIcon" />
         <Icon icon="CheveronDownBigIcon" />
         <Icon icon="CheveronLeftBigIcon" />
+        <Icon icon="CheveronLeftActiveBigIcon" />
       </div>
 
       <div tw="flex gap-4">
@@ -150,6 +151,8 @@ export const Big: Story = {
         <Icon icon="PinActiveIcon" />
         <Icon icon="ZoomInIcon" />
         <Icon icon="ZoomOutIcon" />
+        <Icon icon="SettingIcon" />
+        <Icon icon="SearchActiveBigIcon" />
       </div>
 
       <div tw="w-fit flex gap-4 p-4 border border-gray-100 rounded-sm">
@@ -163,8 +166,6 @@ export const Big: Story = {
         <Icon icon="ListIcon" />
         <Icon icon="MoreIcon" />
         <Icon icon="RefreshBigIcon" />
-
-        <Icon icon="SettingIcon" />
         <Icon icon="ShareIcon" />
       </div>
     </div>

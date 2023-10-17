@@ -6,7 +6,7 @@ import { BottomNavigation } from '@/components';
 import { TabList } from '@/components/NavigationItem';
 
 /**
- * 바텀내비게이션에 쓰이는 아이탬을 확인 할 수 있습니다.
+ * 바텀내비게이션에 쓰이는 컴포넌트를 확인 할 수 있습니다.
  */
 
 const meta = {
