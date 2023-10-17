@@ -116,6 +116,16 @@ export const Big: Story = {
           <Icon icon="GraphBigIcon" />
           <Icon icon="GraphAcitveBigIcon" />
         </div>
+
+        <div tw="w-fit flex gap-4 p-4 border border-gray-100 rounded-sm">
+          <Icon icon="SearchBigIcon" />
+          <Icon icon="SearchActiveBigIcon" />
+        </div>
+
+        <div tw="w-fit flex gap-4 p-4 border border-gray-100 rounded-sm">
+          <Icon icon="WriteIcon" />
+          <Icon icon="WriteActiveIcon" />
+        </div>
       </div>
 
       <div tw="flex gap-4">
@@ -130,7 +140,7 @@ export const Big: Story = {
           <Icon icon="HomeActiveIcon" />
           <Icon icon="MyIcon" />
           <Icon icon="MyActiveIcon" />
-        </div>{' '}
+        </div>
       </div>
 
       <div tw="w-fit flex gap-4 p-4 border border-gray-100 rounded-sm">
@@ -153,10 +163,9 @@ export const Big: Story = {
         <Icon icon="ListIcon" />
         <Icon icon="MoreIcon" />
         <Icon icon="RefreshBigIcon" />
-        <Icon icon="SearchBigIcon" />
+
         <Icon icon="SettingIcon" />
         <Icon icon="ShareIcon" />
-        <Icon icon="WriteIcon" />
       </div>
     </div>
   ),

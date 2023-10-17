@@ -11,6 +11,7 @@ const config: StorybookConfig = {
     '@storybook/addon-controls',
     '@storybook/addon-actions',
     '@storybook/addon-docs',
+    '@storybook/addon-viewport',
     {
       name: '@storybook/addon-styling',
       options: {
@@ -18,6 +19,7 @@ const config: StorybookConfig = {
       },
     },
   ],
+
   framework: {
     name: '@storybook/nextjs',
     options: {},

@@ -92,12 +92,14 @@ export { default as PinActiveIcon } from '@/assets/icons/big/pin_active_24.svg';
 export { default as RefreshBigIcon } from '@/assets/icons/big/refresh_24.svg';
 
 export { default as SearchBigIcon } from '@/assets/icons/big/search_24.svg';
+export { default as SearchActiveBigIcon } from '@/assets/icons/big/search_active_24.svg';
 
 export { default as SettingIcon } from '@/assets/icons/big/setting_24.svg';
 
 export { default as ShareIcon } from '@/assets/icons/big/share_24.svg';
 
 export { default as WriteIcon } from '@/assets/icons/big/write_24.svg';
+export { default as WriteActiveIcon } from '@/assets/icons/big/write_active_24.svg';
 
 export { default as ZoomInIcon } from '@/assets/icons/big/zoom_in_24.svg';
 export { default as ZoomOutIcon } from '@/assets/icons/big/zoom_out_24.svg';

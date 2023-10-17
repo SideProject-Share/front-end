@@ -1,5 +1,4 @@
 import React from 'react';
-
 import * as icons from '@/assets/icons/index';
 import { IconProps, IconType } from './types';
 
