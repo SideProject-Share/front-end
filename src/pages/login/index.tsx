@@ -1,20 +1,27 @@
-/* eslint-disable @next/next/no-img-element */
-
-// import Kakao from '@/libs/kakao';
-import { Button } from '@/components';
-import Kakao from '@/libs/kakao';
-import React from 'react';
+import { loginWithKakao } from '@/libs/kakao';
+import { NaverLoginButton, NavigationHeader } from '@/components';
+import Image from 'next/image';
 
 function Login() {
   return (
-    <div tw="flex flex-col bg-error-main">
-      <button type="button" tw="w-fit">
-        <img src="images/kakao_login.png" alt="" />
-      </button>
+    <div tw="bg-bg-main [min-width: 360px] [max-width: 428px] min-h-full mx-auto relative">
+      <NavigationHeader>
+        <NavigationHeader.Logo />
+      </NavigationHeader>
 
-      <button type="button" tw="w-fit">
-        <img src="images/naver_login.png" alt="" />
-      </button>
+      <div tw="w-full flex-1 min-h-0 overflow-auto px-5 py-10 items-center justify-center">
+        <p tw="text-center">로그인 페이지</p>
+      </div>
+
+      <div tw="w-full flex flex-col items-center gap-4 px-5">
+        <button type="button" tw="w-fit flex-1" onClick={() => loginWithKakao()}>
+          <Image width={180} height={48} src="/images/kakao_login.png" alt="" />
+        </button>
+
+        <div tw="w-[180px]">
+          <NaverLoginButton />
+        </div>
+      </div>
     </div>
   );
 }

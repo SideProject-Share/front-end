@@ -5,16 +5,8 @@ declare module '*.svg' {
 
 declare global {
   interface Window {
-    Kakao: any;
+    naver: any;
   }
 }
 
-interface KakaoSDK {
-  init: (key: string) => void;
-  isInitialized: () => boolean;
-  Auth: {
-    authorize: (options: { redirectUri: string; scope: string; serviceTerms: string }) => void;
-  };
-}
-
-export const Kakao = window.Kakao;
+export const naver = window.naver;

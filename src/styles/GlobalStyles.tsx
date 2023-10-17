@@ -1,14 +1,16 @@
 import React from 'react';
 import { Global } from '@emotion/react';
-import tw, { css, GlobalStyles as BaseStyles } from 'twin.macro';
+import tw, { css, GlobalStyles as BaseStyles, theme } from 'twin.macro';
 
 const customStyles = css`
   body {
-    ${tw`antialiased text-gray-black`}
+    ${tw`antialiased text-grayText-100`}
+    overscroll-behavior: contain;
   }
 
   * {
     outline: none;
+    box-sizing: border-box;
   }
 
   html,
@@ -16,6 +18,31 @@ const customStyles = css`
   #__next,
   #root {
     height: 100%;
+    overflow: hidden;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+
+  ::-webkit-scrollbar-button {
+    display: none;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: ${theme`colors.line.main`};
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-left: none;
+    border-right: none;
   }
 `;
 

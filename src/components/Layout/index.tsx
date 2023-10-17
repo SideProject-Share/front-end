@@ -1,14 +1,17 @@
-import 'twin.macro';
 import React from 'react';
-import BottomNavigation from '../BottomNavigation';
-// import Header from '../Header';
+import tw from 'twin.macro';
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+const Container = tw.div`flex flex-col bg-bg-main [min-width: 360px] [max-width: 428px] w-full h-full mx-auto`;
+
+const MainWrraper = tw.div`relative w-full flex-1 min-h-0 my-0 [z-index: 1] overflow-hidden mx-auto`;
+
+const BottomWrraper = tw.div`[min-width: 360px] [max-width: 428px] w-full mx-auto`;
+
+export default function Layout({ children, bottomNav }: { children: React.ReactNode; bottomNav?: JSX.Element | null }) {
   return (
-    <div tw="bg-bg-main [min-width: 360px] [max-width: 428px] min-h-full mx-auto">
-      {/* <Header /> */}
-      <main>{children}</main>
-      <BottomNavigation selectedTab="Home" />
-    </div>
+    <Container>
+      <MainWrraper>{children}</MainWrraper>
+      {bottomNav && <BottomWrraper>{bottomNav}</BottomWrraper>}
+    </Container>
   );
 }

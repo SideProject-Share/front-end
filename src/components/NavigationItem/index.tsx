@@ -16,16 +16,19 @@ const Tab = {
 export const TabList: NavigationTab[] = Object.keys(Tab) as any[];
 
 const NavigationItem = ({ tab, active = false }: NavigationItemProps) => (
-  <div tw="w-fit flex flex-col flex-1 justify-center items-center gap-1 ">
-    {tab === 'Home' && (active ? <Icon icon="HomeActiveIcon" /> : <Icon icon="HomeIcon" />)}
-    {tab === 'Search' && (active ? <Icon icon="SearchActiveBigIcon" /> : <Icon icon="SearchBigIcon" />)}
-    {tab === 'Post' && (active ? <Icon icon="WriteActiveIcon" /> : <Icon icon="WriteIcon" />)}
-    {tab === 'My' && (active ? <Icon icon="MyActiveIcon" /> : <Icon icon="MyIcon" />)}
+  <button type="button" tw="w-fit flex flex-col flex-1 justify-center items-center gap-1 ">
+    {tab === 'Home' && <Icon icon={active ? 'HomeActiveIcon' : 'HomeIcon'} />}
+
+    {tab === 'Search' && <Icon icon={active ? 'SearchActiveBigIcon' : 'SearchBigIcon'} />}
+
+    {tab === 'Post' && <Icon icon={active ? 'WriteActiveIcon' : 'WriteIcon'} />}
+
+    {tab === 'My' && <Icon icon={active ? 'MyActiveIcon' : 'MyIcon'} />}
 
     <p tw="text-grayText-100 text-10 leading-3 [letter-spacing: -0.5px]" css={[active && tw`text-main-default`]}>
       {Tab[tab]}
     </p>
-  </div>
+  </button>
 );
 
 export default NavigationItem;

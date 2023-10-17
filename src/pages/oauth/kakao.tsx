@@ -6,13 +6,9 @@ function Kakao() {
 
   useEffect(() => {
     if (query?.code) {
-      // 여기서 서버로 코드를 보낸 후 유효성 검사를 가지고 회원인지 아닌지 판단해서
+      const accessToken = query.code as string;
 
-      // 회원이 아니면 회원가입이 필요하다
-
-      // 회원이면 홈으로
-
-      replace('/');
+      console.log(accessToken);
     }
   }, [replace, query]);
 
