@@ -41,6 +41,13 @@ export { default as TooltipIcon } from '@/assets/icons/regular/tooltip_16.svg';
 
 export { default as ViewIcon } from '@/assets/icons/regular/view_16.svg';
 
+// 20px
+export { default as CheckboxDefaultIcon } from '@/assets/icons/regular/checkbox_default.svg';
+
+export { default as CheckboxCheckedIcon } from '@/assets/icons/regular/checkbox_checked.svg';
+
+export { default as CheckboxHoverIcon } from '@/assets/icons/regular/checkbox_hover.svg';
+
 /** 24px Icons */
 
 export { default as AppstoreIcon } from '@/assets/icons/big/appstore_24.svg';
