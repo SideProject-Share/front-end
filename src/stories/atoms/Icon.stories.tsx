@@ -1,8 +1,8 @@
 import 'twin.macro';
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Icon } from '@/components';
-import { IconLists } from '@/components/Icon';
+import { Icon } from '@/components/atoms';
+import { IconLists } from '@/components/atoms/Icon';
 
 /**
  * 사이트에 쓰이는 아이콘을 확인 할 수 있습니다.
@@ -171,7 +171,3 @@ export const Big: Story = {
     </div>
   ),
 };
-
-/**
- * 한눈에 버튼의 테마를 볼 수 있습니다.
- */

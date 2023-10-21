@@ -2,9 +2,9 @@ import tw from 'twin.macro';
 
 import React from 'react';
 
-import { NavigationItemProps, NavigationTab } from './types';
-
 import Icon from '../Icon';
+
+import { NavigationItemProps, NavigationTab } from './types';
 
 const Tab = {
   Home: '홈',

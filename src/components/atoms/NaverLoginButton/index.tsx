@@ -1,5 +1,6 @@
-import { loginWithNaver } from '@/libs/naver';
 import { useEffect } from 'react';
+
+import { loginWithNaver } from '@/libs/naver';
 
 export default function NaverLoginButton() {
   useEffect(() => {

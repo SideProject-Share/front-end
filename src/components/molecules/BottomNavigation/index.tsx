@@ -1,6 +1,9 @@
 import React from 'react';
+
 import 'twin.macro';
-import NavigationItem from '../NavigationItem';
+
+import { NavigationItem } from '@/components/atoms';
+
 import { BottomNavigationProps } from './types';
 
 const BottomNavigationItem = ({ selectedTab }: BottomNavigationProps) => (

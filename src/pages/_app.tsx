@@ -1,14 +1,15 @@
-/* eslint-disable import/named */
-import type { AppProps } from 'next/app';
-
+/* eslint-disable import/order */
 import { cache } from '@emotion/css';
 import { CacheProvider } from '@emotion/react';
+import type { AppProps } from 'next/app';
 
-import GlobalStyles from '@/styles/GlobalStyles';
 import '@/styles/globals.css';
-import Script from 'next/script';
+
 import Head from 'next/head';
+import Script from 'next/script';
+
 import { initializeKakaoSDK } from '@/libs/kakao';
+import GlobalStyles from '@/styles/GlobalStyles';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (

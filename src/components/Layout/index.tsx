@@ -1,5 +1,6 @@
-import React from 'react';
 import tw from 'twin.macro';
+
+import React from 'react';
 
 const Container = tw.div`flex flex-col bg-bg-main [min-width: 360px] [max-width: 428px] w-full h-full mx-auto`;
 

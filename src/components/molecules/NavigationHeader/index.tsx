@@ -1,6 +1,10 @@
-import React from 'react';
 import tw from 'twin.macro';
-import Icon from '../Icon';
+
+import React from 'react';
+
+import Icon from '@/components/atoms/Icon';
+
+import { NavigationHeaderProps } from './types';
 
 const NavigationHeader = tw.div`flex items-center w-full h-14 border-b border-b-line-main px-5 py-4 shrink-0`;
 
@@ -14,7 +18,7 @@ function Logo() {
   );
 }
 
-function BackButton({ onClick, title }: { onClick?: () => void; title?: string }) {
+function BackButton({ onClick, title }: NavigationHeaderProps) {
   return (
     <button type="button" onClick={onClick} tw="h-full flex items-center gap-1">
       <Icon icon="CheveronLeftActiveBigIcon" />
@@ -23,7 +27,7 @@ function BackButton({ onClick, title }: { onClick?: () => void; title?: string }
   );
 }
 
-function SettingButton({ onClick }: { onClick?: () => void }) {
+function SettingButton({ onClick }: NavigationHeaderProps) {
   return (
     <button type="button" onClick={onClick} tw="h-full flex items-center ml-auto">
       <Icon icon="SettingActiveIcon" />
@@ -31,7 +35,7 @@ function SettingButton({ onClick }: { onClick?: () => void }) {
   );
 }
 
-function PinButton({ onClick }: { onClick?: () => void }) {
+function PinButton({ onClick }: NavigationHeaderProps) {
   return (
     <button type="button" onClick={onClick} tw="h-full flex items-center ml-auto">
       <Icon icon="PinActiveIcon" />

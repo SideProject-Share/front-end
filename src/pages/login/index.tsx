@@ -1,8 +1,12 @@
+import { useState } from 'react';
+
+import { KakaoLoginButton, Radio } from '@/components/atoms';
+import NaverLoginButton from '@/components/atoms/NaverLoginButton';
+import { NavigationHeader, RadioGroup } from '@/components/molecules';
 import { loginWithKakao } from '@/libs/kakao';
-import { NaverLoginButton, NavigationHeader } from '@/components';
-import Image from 'next/image';
 
 function Login() {
+  const [value, setValue] = useState(1);
   return (
     <div tw="bg-bg-main [min-width: 360px] [max-width: 428px] min-h-full mx-auto relative">
       <NavigationHeader>
@@ -14,14 +18,30 @@ function Login() {
       </div>
 
       <div tw="w-full flex flex-col items-center gap-4 px-5">
-        <button type="button" tw="w-fit flex-1" onClick={() => loginWithKakao()}>
-          <Image width={180} height={48} src="/images/kakao_login.png" alt="" />
-        </button>
+        <KakaoLoginButton onClick={loginWithKakao} />
 
         <div tw="w-[180px]">
           <NaverLoginButton />
         </div>
       </div>
+
+      <RadioGroup
+        value={value}
+        onChange={(e) => {
+          console.log(e);
+          setValue(Number(e.target.value));
+        }}
+        // value={args.value}
+        // onChange={(e) => {
+        //   console.log(e);
+        //   onValueChange(e.target.value);
+        // }}
+        tw="flex gap-2"
+      >
+        <Radio value={1} />
+        <Radio value={2} />
+        <Radio value={3} />
+      </RadioGroup>
     </div>
   );
 }

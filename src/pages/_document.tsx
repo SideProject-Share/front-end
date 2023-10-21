@@ -1,6 +1,5 @@
-import Document, { DocumentContext, DocumentInitialProps, Head, Html, Main, NextScript } from 'next/document';
-
 import { extractCritical } from '@emotion/server';
+import Document, { DocumentContext, DocumentInitialProps, Head, Html, Main, NextScript } from 'next/document';
 
 type NewDocumentInitialProps = DocumentInitialProps & {
   ids: string[];

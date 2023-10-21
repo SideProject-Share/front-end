@@ -20,6 +20,7 @@
     "@emotion/serialize": "^1.1.2",
     "@emotion/server": "^11.11.0",
     "@emotion/styled": "^11.11.0",
+    "@storybook/preview-api": "^7.4.6",
     "@svgr/webpack": "^8.1.0",
     "@types/node": "20.1.1",
     "@types/react": "18.2.6",

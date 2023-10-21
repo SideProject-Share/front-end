@@ -2,8 +2,8 @@ import 'twin.macro';
 
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Button } from '@/components';
-import { ButtonProps } from '@/components/Button/types';
+import { Button } from '@/components/atoms';
+import { ButtonProps } from '@/components/atoms/Button/types';
 
 const ButtonVariantList: ButtonProps['variant'][] = [
   'primary',
