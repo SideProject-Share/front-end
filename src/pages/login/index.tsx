@@ -24,24 +24,6 @@ function Login() {
           <NaverLoginButton />
         </div>
       </div>
-
-      <RadioGroup
-        value={value}
-        onChange={(e) => {
-          console.log(e);
-          setValue(Number(e.target.value));
-        }}
-        // value={args.value}
-        // onChange={(e) => {
-        //   console.log(e);
-        //   onValueChange(e.target.value);
-        // }}
-        tw="flex gap-2"
-      >
-        <Radio value={1} />
-        <Radio value={2} />
-        <Radio value={3} />
-      </RadioGroup>
     </div>
   );
 }

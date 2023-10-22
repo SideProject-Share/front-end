@@ -3,8 +3,7 @@ import 'twin.macro';
 import { useArgs } from '@storybook/preview-api';
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Radio } from '@/components/atoms';
-import Label from '@/components/atoms/Label';
+import { Radio, Label } from '@/components/atoms';
 import { RadioGroup } from '@/components/molecules';
 
 /**

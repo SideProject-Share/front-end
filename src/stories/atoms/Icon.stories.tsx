@@ -77,6 +77,10 @@ export const Regular: Story = {
         <Icon icon="CalendarIcon" />
         <Icon icon="ChatOnIcon" />
         <Icon icon="CheckIcon" />
+        <Icon icon="CheckBlackIcon" />
+        <span tw="text-grayText-200">
+          <Icon icon="CheckCurrentIcon" />
+        </span>
         <Icon icon="DealIcon" />
         <Icon icon="FilterIcon" />
         <Icon icon="GraphIcon" />

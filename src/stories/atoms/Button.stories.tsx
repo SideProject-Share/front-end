@@ -23,9 +23,7 @@ const ButtonSizeList: ButtonProps['size'][] = ['medium', 'big', 'none'];
 
 const meta = {
   title: 'atoms/Button',
-
   component: Button,
-
   argTypes: {
     variant: {
       description: 'type `primary` | `gray[xxx]` | `black` | `outlined` | `ghost`',

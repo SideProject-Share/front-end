@@ -46,6 +46,10 @@ export const Default: Story = {
   render: (args) => <Radio variant={args.variant} checked={args.checked} />,
 };
 
+/**
+ * 전체 라디오 버튼입니다.
+ */
+
 export const RadioButtons: Story = {
   render: () => (
     <div tw="flex gap-4 p-4 border border-gray-100 rounded-sm">

@@ -4,6 +4,7 @@ const path = require('path');
 
 const config: StorybookConfig = {
   stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
+  staticDirs: ['../src'],
   addons: [
     '@storybook/addon-links',
     '@storybook/addon-essentials',

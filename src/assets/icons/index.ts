@@ -11,6 +11,8 @@ export { default as CalendarIcon } from '@/assets/icons/regular/calendar_16.svg'
 export { default as ChatOnIcon } from '@/assets/icons/regular/chat_on_16.svg';
 
 export { default as CheckIcon } from '@/assets/icons/regular/check_16.svg';
+export { default as CheckCurrentIcon } from '@/assets/icons/regular/check_current_16.svg';
+export { default as CheckBlackIcon } from '@/assets/icons/regular/check_black_16.svg';
 
 export { default as CloseEmptyIcon } from '@/assets/icons/regular/close_empty_16.svg';
 export { default as CloseFillIcon } from '@/assets/icons/regular/close_fill_16.svg';
