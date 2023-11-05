@@ -88,7 +88,7 @@ module.exports = {
       main: { default: '#D4F153', disabled: '#C5D2AA' },
       line: { main: '#EAEAEA' },
       error: { main: '#FF4747' },
-      success: { main: '14BC58' },
+      success: { main: '#14BC58' },
       bg: { main: '#242424' },
 
       gray: {

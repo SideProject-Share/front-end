@@ -1,3 +1,5 @@
+import 'twin.macro';
+
 import React from 'react';
 
 import * as icons from '@/assets/icons/index';
