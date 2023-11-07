@@ -1,20 +1,14 @@
 # Workflow name
-name: 'Storybook Deployment'
-run-name: 스토리북 배포
+name: 'Chromatic Deployment'
 
 # Event for the workflow
-on:
-  pull_request:
-    branches:
-      - develope
+on: push
 
 # List of jobs
 jobs:
   test:
     # Operating System
     runs-on: ubuntu-latest
-    outputs:
-      status: ${{ job.status }}
     # Job steps
     steps:
       - uses: actions/checkout@v1
@@ -25,4 +19,4 @@ jobs:
         with:
           #👇 Chromatic projectToken, see https://storybook.js.org/tutorials/intro-to-storybook/react/ko/deploy/ to obtain it
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-          token: ${{ secrets.GITHUB_TOKEN}}
+          token: ${{ secrets.GITHUB_TOKEN }}

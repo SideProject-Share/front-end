@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
 body {
-  background: white;
+  height: 100%;
+}
+
+body {
+  /* background: #242424; */
+}
+
+#storybook-root {
+  height: 100%;
+  overflow: hidden;
+}
+
+#naverIdLogin {
+  display: none;
 }

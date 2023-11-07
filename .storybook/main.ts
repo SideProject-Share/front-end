@@ -4,13 +4,15 @@ const path = require('path');
 
 const config: StorybookConfig = {
   stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
+  staticDirs: ['../src'],
   addons: [
     '@storybook/addon-links',
     '@storybook/addon-essentials',
     '@storybook/addon-interactions',
-    '@storybook/addon-actions',
     '@storybook/addon-controls',
+    '@storybook/addon-actions',
     '@storybook/addon-docs',
+    '@storybook/addon-viewport',
     {
       name: '@storybook/addon-styling',
       options: {
@@ -18,6 +20,7 @@ const config: StorybookConfig = {
       },
     },
   ],
+
   framework: {
     name: '@storybook/nextjs',
     options: {},
