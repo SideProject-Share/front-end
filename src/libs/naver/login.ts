@@ -20,7 +20,7 @@ const loginWithNaver = () => {
     clientId: process.env.NEXT_PUBLIC_NCP_ClIENT_ID,
     callbackUrl: `${window.location.origin}/oauth/naver`,
     isPopup: false,
-    loginButton: { color: 'green' },
+    loginButton: { color: 'green', type: 3, height: 48 },
   });
 
   naverLogin.init();

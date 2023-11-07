@@ -26,6 +26,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <Script src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.2.js" />
       <CacheProvider value={cache}>
         <GlobalStyles />
+        <div id="rootOverlay" tw="pointer-events-none [z-index: 1500]" />
         <Component {...pageProps} />
       </CacheProvider>
     </>

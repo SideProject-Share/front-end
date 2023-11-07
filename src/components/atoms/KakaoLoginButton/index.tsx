@@ -1,11 +1,11 @@
-import Image from 'next/image';
+import { loginWithKakao } from '@/libs/kakao';
 
-import { KakaoLoginButtonProps } from './types';
+import Button from '../Button';
 
-export default function NaverLoginButton({ onClick }: KakaoLoginButtonProps) {
+export default function KakaoLoginButton() {
   return (
-    <button type="button" tw="w-fit flex-1" onClick={onClick}>
-      <Image width={180} height={48} src="/images/kakao_login.png" alt="" />
-    </button>
+    <Button tw="w-full flex-1 bg-[#FEE500] font-bold text-gray-black" onClick={() => loginWithKakao()} size="big">
+      카카오 아이디로 로그인
+    </Button>
   );
 }

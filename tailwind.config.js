@@ -77,6 +77,14 @@ module.exports = {
       },
     },
 
+    minWidth: {
+      mobile: '360px',
+    },
+
+    maxWidth: {
+      mobile: '428px',
+    },
+
     screens: {
       sm: '480px',
       md: '768px',

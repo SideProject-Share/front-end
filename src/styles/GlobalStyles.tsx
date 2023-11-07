@@ -5,7 +5,7 @@ import React from 'react';
 
 const customStyles = css`
   body {
-    ${tw`antialiased text-grayText-100`}
+    ${tw`antialiased text-white`}
     overscroll-behavior: contain;
   }
 
