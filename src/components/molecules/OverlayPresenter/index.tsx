@@ -17,6 +17,7 @@ export default function OverlayPresenter({
   animationType = 'scale',
   position = 'center',
   dropShadow = true,
+  type = 'modal',
   children,
 }: OverlayPresenterProps) {
   const container = typeof window !== 'undefined' && document.getElementById('rootOverlay');
@@ -27,10 +28,15 @@ export default function OverlayPresenter({
           css={[
             tw`fixed top-0 left-0 flex flex-col w-full h-full z-[1000] pointer-events-auto`,
             position === 'center' && tw`items-center justify-center`,
+            position === 'bottom' && tw`items-center justify-end`,
             dropShadow && tw`bg-[rgba(0,0,0,0.5)]`,
           ]}
         >
-          <motion.div tw="w-fit h-fit" animate={animations[animationType]}>
+          <motion.div
+            tw="h-fit"
+            animate={animations[animationType]}
+            css={[type === 'modal' ? tw`w-fit` : tw`w-full max-w-mobile`]}
+          >
             {children}
           </motion.div>
         </div>,

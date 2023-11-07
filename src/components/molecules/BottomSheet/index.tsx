@@ -6,7 +6,7 @@ import Header from './Header';
 import { BottomSheetProps } from './types';
 
 function BottomSheetComponent({ children }: BottomSheetProps) {
-  return <>{children}</>;
+  return <div>{children}</div>;
 }
 
 const BottomSheet = Object.assign(BottomSheetComponent, {
